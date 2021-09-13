@@ -6,8 +6,11 @@ You can download all models in our paper at [Google drive](https://drive.google.
 # Acknowlegements 
 Our work is an add-on approach and can be pluged into existing deep semantic segmentation models.
 
-We achieved below PyTorch implementations:
-1. PSPNet & PSANet (including Pacal Voc and Cityscapes)
-2. (Pascal Voc) DeepLab V3+
-3. (Cityscapes) DeepLab V3+
+We achieved below PyTorch implementationsb to test our method:
+1. [PSPNet & PSANet](https://github.com/hszhao/semseg) (including Pacal Voc and Cityscapes)
+2. (Pascal Voc) [DeepLab V3+](https://github.com/jfzhang95/pytorch-deeplab-xception)
+3. (Cityscapes) [DeepLab V3+](https://github.com/NVIDIA/semantic-segmentation)
+
+The first repository is released by the author of [PSPNet](https://arxiv.org/abs/1612.01105) and [PSANet](https://hszhao.github.io/papers/eccv18_psanet.pdf).
+
  
