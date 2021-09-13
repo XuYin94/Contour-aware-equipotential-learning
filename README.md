@@ -7,6 +7,7 @@ You can download all models in our paper at [Google drive](https://drive.google.
 Our work is an add-on approach and can be pluged into existing deep semantic segmentation models.
 
 We achieved below PyTorch implementations:
-## PSPNet & PSANet (including Pacal Voc and Cityscapes)
-## DeepLab
+1. PSPNet & PSANet (including Pacal Voc and Cityscapes)
+2. (Pascal Voc) DeepLab V3+
+3. (Cityscapes) DeepLab V3+
  
