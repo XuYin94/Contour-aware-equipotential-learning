@@ -11,6 +11,6 @@ We achieved below PyTorch implementationsb to test our method:
 2. (Pascal Voc) [DeepLab V3+](https://github.com/jfzhang95/pytorch-deeplab-xception)
 3. (Cityscapes) [DeepLab V3+](https://github.com/NVIDIA/semantic-segmentation)
 
-The first repository is released by the author of [PSPNet](https://arxiv.org/abs/1612.01105) and [PSANet](https://hszhao.github.io/papers/eccv18_psanet.pdf).
+The first repository is released by the author of [PSPNet](https://arxiv.org/abs/1612.01105) and [PSANet](https://hszhao.github.io/papers/eccv18_psanet.pdf), and we achieved powerful mIoU performances on both datasets with DeepLab V3+. 
 
  
