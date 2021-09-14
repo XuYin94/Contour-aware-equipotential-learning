@@ -68,6 +68,7 @@ class Point_loss(Base_class):
         point_loss=0
         prediction = F.softmax(prediction, dim=1)
         batch,nbr_class,w,h=prediction.size()
+        print(class_label.shape)
         for i in range(self.nbr_splitter):
             aniso_opator = self.network_builder(i)
             tmp_pre=aniso_opator(F.pad(prediction, pad=(self.kernel_size // 2, self.kernel_size // 2, self.kernel_size // 2, self.kernel_size // 2), mode='replicate')).view(batch,nbr_class,w,h)
@@ -127,8 +128,8 @@ class Equipotential_learning(Base_class):
 if __name__=='__main__':
     input=torch.rand(1,21,512,512).cuda().float()
     one_hot=(torch.rand(1,21,512,512)>0.5).cuda().float()
-    loss=Equipotential_learning(nbr_classes=19)
-    print(loss(input,one_hot,mu=10,point=['A',21],line=['A',21]))
+    loss=Point_loss(nbr_classes=21,kernel_size=7)
+    print(loss(input,one_hot))
 
 
 
