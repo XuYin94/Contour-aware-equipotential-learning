@@ -68,7 +68,6 @@ class Point_loss(Base_class):
         point_loss=0
         prediction = F.softmax(prediction, dim=1)
         batch,nbr_class,w,h=prediction.size()
-        print(class_label.shape)
         for i in range(self.nbr_splitter):
             aniso_opator = self.network_builder(i)
             tmp_pre=aniso_opator(F.pad(prediction, pad=(self.kernel_size // 2, self.kernel_size // 2, self.kernel_size // 2, self.kernel_size // 2), mode='replicate')).view(batch,nbr_class,w,h)
@@ -114,12 +113,18 @@ class Equipotential_line_loss(Base_class):
         return line_loss / self.nbr_splitter
 
 
-class Equipotential_learning(Base_class):
-    def forward(self, prediction, class_label,mu=10,point=['A',21],line=['A',21]):
+class Equipotential_learning(nn.Module):
+    def __init__(self, nbr_classes=21,point=['A',7],line=['A',7],mu=10,ignore_index=255):
+        super().__init__()
         type,kernel=point
-        point_loss=Point_loss(kernel_size=kernel,type=type)(prediction,class_label)
+        self.point_loss=Point_loss(nbr_classes=nbr_classes,kernel_size=kernel,type=type)
+        self.nbr_classes=nbr_classes
         type, kernel = line
-        line_loss=Equipotential_line_loss(kernel_size=kernel,type=type)(prediction,class_label,mu)
+        self.line_loss=Equipotential_line_loss(nbr_classes=nbr_classes,kernel_size=kernel,type=type)
+        self.mu=mu
+    def forward(self, prediction, class_label):
+        point_loss=self.point_loss(prediction,class_label)
+        line_loss=self.line_loss(prediction,class_label,self.mu)
 
         return 0.02*point_loss+0.2*line_loss
 
@@ -128,7 +133,7 @@ class Equipotential_learning(Base_class):
 if __name__=='__main__':
     input=torch.rand(1,21,512,512).cuda().float()
     one_hot=(torch.rand(1,21,512,512)>0.5).cuda().float()
-    loss=Point_loss(nbr_classes=21,kernel_size=7)
+    loss=Equipotential_learning(nbr_classes=21,point=['A',7],line=['A',7],mu=10)
     print(loss(input,one_hot))
 
 
