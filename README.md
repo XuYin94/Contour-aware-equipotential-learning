@@ -1,6 +1,6 @@
 # Equipotential Learning for Semantic Segmentation
 
-This is an offical implementation for a work submitted AAAI 2022 (Under review)
+This is an offical implementation for a work submitted IEEE TMM (Under review)
 You can download all models in our paper at [Google drive](https://drive.google.com/drive/folders/1KJmzhPK1aFe-BWU5pz2Alv9B-N9RBG3C?usp=sharing)
 
 # Acknowlegements 
