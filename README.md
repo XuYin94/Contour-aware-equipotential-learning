@@ -1,12 +1,13 @@
 # Equipotential Learning for Semantic Segmentation
 
-This is an offical implementation of [Contour-Aware Equipotential Learning for Semantic Segmentation](https://arxiv.org/abs/2210.00223) (accepted by IEEE TMM 2022)
-You can download all models in our paper at [Google drive](https://drive.google.com/drive/folders/1KJmzhPK1aFe-BWU5pz2Alv9B-N9RBG3C?usp=sharing)
+This is an official implementation of [Contour-Aware Equipotential Learning for Semantic Segmentation](https://arxiv.org/abs/2210.00223) (accepted by IEEE TMM 2022)
+You can download all models in our paper at [Google Drive](https://drive.google.com/drive/folders/1KJmzhPK1aFe-BWU5pz2Alv9B-N9RBG3C?usp=sharing)
+# Overall Framework
 
 # Acknowlegements 
-Our work is an add-on approach and can be pluged into existing deep semantic segmentation models.
+Our work is an add-on approach and can be plugged into existing deep semantic segmentation models.
 
-We achieved below PyTorch implementationsb to test our method:
+We achieved below PyTorch implementations to test our method:
 1. [PSPNet & PSANet](https://github.com/hszhao/semseg) (including Pascal Voc and Cityscapes)
 2. (Pascal Voc only) [DeepLab V3+](https://github.com/jfzhang95/pytorch-deeplab-xception)
 3. (Cityscapes only) [DeepLab V3+](https://github.com/NVIDIA/semantic-segmentation)
