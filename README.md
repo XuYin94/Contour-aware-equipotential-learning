@@ -3,7 +3,8 @@
 This is an official implementation of [Contour-Aware Equipotential Learning for Semantic Segmentation](https://arxiv.org/abs/2210.00223) (accepted by IEEE TMM 2022)
 You can download all models in our paper at [Google Drive](https://drive.google.com/drive/folders/1KJmzhPK1aFe-BWU5pz2Alv9B-N9RBG3C?usp=sharing)
 # Overall Framework
-
+![overall framework](https://github.com/YininKorea/Contour-aware-equipotential-learning/assets/43773152/6d125774-ee3a-4f76-bdd8-066fe199368e)
+>
 # Acknowlegements 
 Our work is an add-on approach and can be plugged into existing deep semantic segmentation models.
 
