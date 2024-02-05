@@ -6,7 +6,7 @@ You can download all models in our paper at [Google Drive](https://drive.google.
 ![overall framework](https://github.com/YininKorea/Contour-aware-equipotential-learning/assets/43773152/6d125774-ee3a-4f76-bdd8-066fe199368e)
 >
 # Acknowlegements 
-Our work is an add-on approach and can be plugged into existing deep semantic segmentation models.
+Our work ([checkpoints](https://drive.google.com/file/d/1eW3GIkDXiwiPNP2nG_iqCqsRexu0Zliv/view?usp=drive_link)) is an add-on approach and can be plugged into existing deep semantic segmentation models.
 
 We achieved below PyTorch implementations to test our method:
 1. [PSPNet & PSANet](https://github.com/hszhao/semseg) (including Pascal Voc and Cityscapes)
